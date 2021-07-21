@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    </head>
+	
+	<script src="main.js"></script> <link rel="stylesheet" href="styles.css">
+
+    <body style="margin: 0; overflow: hidden;">
+	    
+	    	    <div class= "popup" id= "popup-1">
+    	<div class="overlay">  </div>
+    	<div class="content">
+      <div class="close-btn" onclick="closePopUp()" >&times;</div>
+      <h1>Corredor de arte urbano</h1>
+	<p style="font-size:14px">La Municipalidad de Córdoba, a través de la Subsecretaría de Cultura y de la mano con artistas de nuestra ciudad, se encargó de la realización de intervenciones artísticas de género muralista en la costanera dando luz a  un nuevo ‘corredor de arte urbano a cielo abierto’. Las obras, enmarcadas en el programa “Arte de Nuestra Gente”, se hicieron de manera progresiva y han completado 4.500 m2 de arte visual para nuestra comunidad.</p> 
+
+    </div>
+   </div>
+	    
+        <a-scene
+            embedded
+            loading-screen="enabled: false;"
+            arjs="sourceType: webcam; debugUIEnabled: false;"
+        >
+		
+		<a-image
+                    src="assets/Asset1.png"
+                    scale="13 13 13"
+		    rotation="0 0 0"
+		    gps-entity-place="latitude: -31.4056903; longitude: -64.1915716;"  
+			maxDistance="100"
+                ></a-image>
+				
+				<a-image
+                    src="assets/Asset2.png"
+                    scale="13 13 13"
+		    rotation="0 0 0"
+                    gps-entity-place="latitude: -31.4056557; longitude: -64.1918026;" 
+			maxDistance="100" 
+                ></a-image>
+				
+				<a-image
+                    src="assets/Asset3.png"
+                    scale="13 13 13"
+		    rotation="0 0 0"
+                    gps-entity-place="latitude: -31.4056497; longitude: -64.1918831;"  
+			maxDistance="100"
+                ></a-image>
+				
+				<a-image
+                    src="assets/Asset4.png"
+                    scale="13 13 13"
+		    rotation="0 0 0"
+                    gps-entity-place="latitude: -31.4056491; longitude: -64.1921926;" 
+			maxDistance="100"
+                ></a-image>
+
+		<a-camera id='camera1' look-controls-enabled='true' arjs-look-controls='smoothingFactor: 0.1' gps-camera='gpsMinDistance: 5' rotation-reader> </a-camera>
+        </a-scene>
+    </body>
+</html>
